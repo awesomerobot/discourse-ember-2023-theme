@@ -70,18 +70,25 @@ aside.quote {
 }
 
 .map:first-of-type .buttons .btn {
-  border-radius: var(--d-border-radius-large);
+  border-radius: var(--d-border-radius-large) var(--d-border-radius-large) 0
+    var(--d-border-radius-large);
 }
 
 .topic-map {
   background: var(--primary-100);
   border-radius: var(--d-border-radius-large);
+  border: 1px solid var(--primary-200);
   .toggle-summary {
     padding: 0 10px 1em 10px;
     .summarization-buttons .top-replies {
       margin-left: 0;
     }
   }
+
+  section.map {
+    border-top: none;
+  }
+
   .buttons .btn {
     background: var(--primary-low);
   }
@@ -119,4 +126,8 @@ nav.post-controls .actions {
 
 .more-topics__container .more-topics__list .topic-list-header::after {
   display: none;
+}
+
+.more-topics__container {
+  margin-bottom: 5em;
 }

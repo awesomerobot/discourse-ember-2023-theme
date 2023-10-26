@@ -1,5 +1,8 @@
 .topic-list-item:not(.visited) {
   background: var(--secondary);
+  &:hover {
+    background: rgba(var(--primary-rgb), 0.015);
+  }
 }
 
 .topic-list-item.visited {
@@ -29,4 +32,30 @@
 #list-area {
   margin-bottom: 3.15rem;
   padding-bottom: 3.15rem;
+}
+
+@keyframes background-fade-highlight {
+  0% {
+    background-color: var(--tertiary-low);
+  }
+  100% {
+    background-color: var(--secondary);
+  }
+}
+
+@keyframes background-fade-highlight-visited {
+  0% {
+    background-color: var(--tertiary-low);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.topic-list-item.visited {
+  @media (prefers-reduced-motion: no-preference) {
+    &.highlighted {
+      animation: background-fade-highlight-visited 2.5s ease-out;
+    }
+  }
 }
