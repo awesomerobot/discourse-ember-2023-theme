@@ -56,6 +56,14 @@ a.mention-group {
   padding-top: 1.25rem;
 }
 
+.topic-body {
+  @media (prefers-reduced-motion: no-preference) {
+    &.highlighted {
+      animation: background-fade-highlight-visited 2.5s ease-out;
+    }
+  }
+}
+
 .cooked table thead th,
 .d-editor-preview table thead th {
   color: var(--primary-high);
