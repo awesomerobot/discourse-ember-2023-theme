@@ -1,8 +1,12 @@
+.topic-list-item {
+  // removes row component hover bg
+  &:hover {
+    background: inherit;
+  }
+}
+
 .topic-list-item:not(.visited) {
   background: var(--secondary);
-  &:hover {
-    background: rgba(var(--primary-rgb), 0.015);
-  }
 }
 
 .topic-list-item.visited {
