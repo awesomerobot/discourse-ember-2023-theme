@@ -1,0 +1,32 @@
+.topic-list-item:not(.visited) {
+  background: var(--secondary);
+}
+
+.topic-list-item.visited {
+  .topic-excerpt {
+    color: var(--primary-medium);
+  }
+}
+
+.topic-list {
+  .topic-list-data {
+    padding: 1em 0.25em;
+  }
+  .topic-list-item-separator .topic-list-data span {
+    background: var(--primary-very-low);
+  }
+}
+
+.topic-list-icons,
+.topic-list,
+.latest-topic-list,
+.top-topic-list {
+  .d-icon-bookmark {
+    color: var(--tertiary);
+  }
+}
+
+#list-area {
+  margin-bottom: 3.15rem;
+  padding-bottom: 3.15rem;
+}
